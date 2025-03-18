@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 12px;
+  background-color: white;
+  line-height: 36px;
+}
+
+.header__title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.header__menu span {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  text-align: center;
+}
+.header__menu span:hover {
+  background-color: rgb(228, 228, 228);
+}
