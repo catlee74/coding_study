@@ -19,7 +19,7 @@
   background-position: center;
 }
 .login_account {
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #6b4732;
 }
 
@@ -32,8 +32,8 @@
   width: 240px;
   height: 40px;
   border: 1px solid #bdbdbd;
-  border-radius: 5px;
-  font-size: 0.9rem;
+  border-radius: 2px;
+  font-size: 0.875rem;
 }
 
 .login_form input:focus {
@@ -48,13 +48,13 @@
 .login_form .login_form_id {
   padding: 3px 10px;
   border-bottom: none;
-  border-radius: 5px 5px 0 0;
+  border-radius: 2px 2px 0 0;
 }
 
 .login_form .login_form_pw {
   padding: 3px 10px;
   border-top: none;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 2px 2px;
 }
 
 .login_form .login_form_bt {
