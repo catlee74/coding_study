@@ -9,6 +9,38 @@
     <link href="./css/pages/chat.css" rel="stylesheet" />
     <link href="./css/components/userlist.css" rel="stylesheet" />
     <link href="./img/coconut.png" rel="icon" />
+    <script
+      src="https://kit.fontawesome.com/388c67c3d3.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="chat-screen">
+        <div class="chat-screen__bar"></div>
+        <ul class="chat-screen__comments">
+          <li class="comment">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+            ea?
+          </li>
+          <li class="comment">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+            ea?
+          </li>
+        </ul>
+      </div>
+
+      <form class="chat-form" onsubmit="return false;">
+        <div class="chat-form__plugin">
+          <i class="far fa-smile chat-form__icon"></i>
+          <i class="fas fa-paperclip chat-form__icon"></i>
+          <i class="far fa-calendar-check chat-form__icon"></i>
+        </div>
+        <div class="chat-ftom__field">
+          <textarea class="chat-form__msg"></textarea>
+          <input class="chat-form__bt" type="submit" value="전송" />
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
