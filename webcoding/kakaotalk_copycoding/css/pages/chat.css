@@ -63,3 +63,27 @@
 .chat-form__bt:active {
   background-color: #fee500;
 }
+
+/* 말풍선 스타일 */
+.comment {
+  position: relative;
+
+  width: 280px;
+  height: 100px;
+  list-style-type: none;
+  background-color: #f8f8f8;
+  padding: 12px;
+  margin: 0 0 10px 0;
+  border-radius: 2px;
+  /* line-height: 20px; */
+}
+
+/* 말풍선 꼬리 만들기 */
+/* .comment::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -8px;
+  border-right: 16px solid #f8f8f8;
+  border-bottom: 16px solid transparent;
+} */
