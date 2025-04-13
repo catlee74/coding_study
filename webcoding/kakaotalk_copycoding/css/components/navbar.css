@@ -4,7 +4,7 @@
   left: 0;
   width: 70px;
   height: 100%;
-  background-color: #f1f1f1;
+  background-color: #ededed;
   z-index: 2;
 }
 
@@ -15,21 +15,21 @@
 }
 
 .nav__btn:first-child {
-  margin-top: 50px;
+  margin-top: 4px;
 }
 
 .nav__list .nav__btn a {
   display: block;
-  padding: 16px 0;
-  color: black;
+  padding: 20px 0;
+  color: #5f5f5f;
   text-align: center;
   text-decoration: none;
 }
 
 .nav__list .nav__btn a:not(.active) {
-  color: #bdbdbd;
+  color: #cacaca;
 }
 
 .nav__list .nav__btn a:not(.active):hover {
-  color: #9f9f9f;
+  color: #838383;
 }

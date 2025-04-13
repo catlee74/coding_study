@@ -17,10 +17,11 @@
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
+  margin-bottom: 40px;
 }
 .login_account {
   font-size: 0.8em;
-  color: #6b4732;
+  color: #756900;
 }
 
 .login_form {
@@ -58,14 +59,21 @@
 }
 
 .login_form .login_form_bt {
-  background-color: #6b4732;
+  background-color: #423630;
   color: #ffffff;
   margin-top: 6px;
-  border: 1px solid #bdbdbd;
+  border: 1px solid #29211e;
   cursor: pointer;
 }
 
+.login_form .login_form_bt:hover {
+  background-color: #594941;
+  border: 1px solid #68564e;
+  /* 로그인 버튼 마우스 올려놨을 때 */
+}
+
 .login_form .login_form_bt:active {
-  background-color: #553828;
-  /* 로그인 버튼 클릭했을 시 버튼이 어둡게 변하게 */
+  background-color: #766258;
+  border: 1px solid #473b34;
+  /* 로그인 버튼 클릭했을 시 */
 }
