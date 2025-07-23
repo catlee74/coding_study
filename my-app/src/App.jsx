@@ -3,75 +3,37 @@ import { useState } from 'react';
 // import viteLogo from '/vite.svg';
 import './App.css';
 
-// let initialDomain = 'naver.com'
-
-function veryHeavyComputation() {
-  let sum = 0;
-  for (let i = 0; i < 1000000; i++) {
-    sum += i;
-  }
-  return sum;
-}
-
 function App() {
-  const [id, setId] = useState(veryHeavyComputation);
-  const [domain, setDomain] = useState('naver.com');
-  const [password, setPassword] = useState('');
-  // const [fullEmail, setFullEmail] = useState('');
+  let post = '강남 우동 맛집';
+  let logo = 'ReactBlog';
 
-  // setDomain('gmail.com');
-  const domains = ['naver.com', 'gmail.com', 'hanmail.com'];
-  // initialDomain = 'gmail.com'
-  //도메인은 초기값을 기억하는 성질을 가지고 있어서 위와같이 중간에 값을 바꿔도 적용이 되지 않는다.
-  //업데이트 하려면 setDomain함수를 사용해야 함
+  let [글제목1, a] = useState('카페 추천');
+  let [글제목2, b] = useState('향수 추천');
+  let [글제목3, c] = useState('옷 추천');
 
-  console.log('App', id);
-
-  const onChangeEmail = (e) => {
-    setId(e.target.value);
-    // setFullEmail(`${e.target.value}@${domain}`);
-  };
-
-  const onChangeDomain = (e) => {
-    setDomain(e.target.value);
-    // setFullEmail(`${id}@${e.target.value}`);
-  };
-
-  const onChangePassword = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const fullDomain = `${id}@${domain}`;
-
-  const onLogin = () => {
-    console.log(fullDomain, password);
-  };
+  // let [logo, setLogo] = useState('ReactBlog');
+  //블로그 로고 같은 것은 그냥 변수로 만들어서 하는 것이 더 좋음
+  //왜냐하면 자주 안바뀌니까. 그러니까 위에 logo처럼 하지말고
+  //let post처럼 변수로 let logo뭐 이렇게 만들자ㅣ
   return (
-    <>
-      <div>
-        <div>
-          <input type="text" value={id} onChange={onChangeEmail} />
-          {domain == '' ? null : <span>@</span>}
-          <select value={domain} onChange={onChangeDomain}>
-            {domains.map((d) => {
-              return (
-                <option key={d} value={d}>
-                  {d}
-                </option>
-              );
-            })}
-            {/* <option value="naver.com">naver.com</option>
-          <option value="gmail.com">gmail.com</option>
-          <option value="hanmail.com">hanmail.com</option> */}
-            <option value="">직접입력</option>
-          </select>
-        </div>
-        <input type="password" value={password} onChange={onChangePassword} />
-        {/* <div>{fullDomain}</div> */}
-        <button onClick={onLogin}>login</button>
+    <div className="App">
+      <div className="black-nav">
+        <h4>{logo}</h4>
       </div>
-      <div>회원가입</div>
-    </>
+      <div className="list">
+        <h4>{글제목1}</h4>
+        <p>2월 17일 발행</p>
+      </div>
+      <div className="list">
+        <h4>{글제목2}</h4>
+        <p>2월 17일 발행</p>
+      </div>
+      <div className="list">
+        <h4>{글제목3}</h4>
+        <p>2월 17일 발행</p>
+      </div>
+      <h4>{post}</h4>
+    </div>
   );
 }
 
