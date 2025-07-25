@@ -4,37 +4,76 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  let post = '강남 우동 맛집';
+  // let post = '강남 우동 맛집';
   let logo = 'ReactBlog';
 
-  let [글제목1, a] = useState('카페 추천');
-  let [글제목2, b] = useState('향수 추천');
-  let [글제목3, c] = useState('옷 추천');
+  let [글제목, 글제목변경] = useState(['카페 추천', '향수 추천', '옷 추천']);
+  let [좋아요, 좋아요변경] = useState(0);
 
-  // let [logo, setLogo] = useState('ReactBlog');
-  //블로그 로고 같은 것은 그냥 변수로 만들어서 하는 것이 더 좋음
-  //왜냐하면 자주 안바뀌니까. 그러니까 위에 logo처럼 하지말고
-  //let post처럼 변수로 let logo뭐 이렇게 만들자ㅣ
   return (
     <div className="App">
       <div className="black-nav">
         <h4>{logo}</h4>
       </div>
+
+      <button
+        onClick={() => {
+          let copy1 = [...글제목];
+          copy1.sort();
+          글제목변경(copy1);
+        }}
+      >
+        가나다순정렬
+      </button>
+
+      <button
+        onClick={() => {
+          let copy = [...글제목];
+          copy[0] = '여자코트 추천';
+          글제목변경(copy);
+        }}
+      >
+        글수정
+      </button>
+
       <div className="list">
-        <h4>{글제목1}</h4>
+        <h4>
+          <span>{글제목[0]}</span>
+
+          <span
+            onClick={() => {
+              좋아요변경(좋아요 + 1);
+            }}
+          >
+            👍
+          </span>
+          {/* 이렇게 함수를 축약할 수도 있다. ()=>{}는 함수만드는 문법이다. */}
+
+          {좋아요}
+        </h4>
         <p>2월 17일 발행</p>
       </div>
       <div className="list">
-        <h4>{글제목2}</h4>
+        <h4>{글제목[1]}</h4>
         <p>2월 17일 발행</p>
       </div>
       <div className="list">
-        <h4>{글제목3}</h4>
+        <h4>{글제목[2]}</h4>
         <p>2월 17일 발행</p>
       </div>
-      <h4>{post}</h4>
+      {/* <h4>{post}</h4> */}
+      <Modal></Modal>
     </div>
   );
 }
 
+function Modal() {
+  return (
+    <div className="modal">
+      <h4>제목</h4>
+      <p>날짜</p>
+      <p>상세내용</p>
+    </div>
+  );
+}
 export default App;
